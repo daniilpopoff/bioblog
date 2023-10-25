@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html>
+   {% load static %} <!-- Load static files -->
 <head>
+	<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <body>
     <title>Hello, I'm Daniil Popov</title>
-</head>
-<body>
+
+
+
+
     <h1>About me:</h1>
     <p>I'm CS student, I want to practice in bioinformatic, and figure out what is this.</p>
 
     <h2>Connect with me </h2>
     <p>Вы можете связаться со мной по адресу электронной почты: <a href="mailto:daniil.popoff@gmail.com">daniil.popoff@gmail.com</a>.</p>
+
+    {% load static %} <!-- Load static files -->
+
+
+<!-- Required meta tags -->
+    <title>Disease Predictor</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Include custom CSS file -->
+
+    <style>
+    .ok{
+        color: green;
+        font-size: 30px;
+    }
+    </style>
+
+<br></br>
+<div class="container">
+	<div class="card-body">
+	<a href="{% url 'heart' %}" class="btn btn-block btn-danger text-uppercase">KNOW HEART HEALTH STATUS</a> <!-- Link to the 'heart' view -->
+	</div>
+</div>
+</section>
+</body>
+
+</html>
+
 </body>
 </html>
