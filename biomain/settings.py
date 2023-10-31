@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bio_blog',
-    'ckeditor'
+    'ckeditor',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -55,10 +56,7 @@ ROOT_URLCONF = 'biomain.urls'
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-STATIC_ROOT = BASE_DIR / 'static/'
-STATIC_URL = "static/"
-MEDIA_URL = "media/"
+
 
 
 TEMPLATES = [
@@ -126,8 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+STATIC_ROOT = BASE_DIR / 'static/'
+MEDIA_URL = "media/"
+# STATICFILES_DIRS = [BASE_DIR / 'static', ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+# AUTH_USER_MODEL = 'auth.User.user_permissions'

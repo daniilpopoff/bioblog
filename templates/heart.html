@@ -26,7 +26,7 @@
 	<div class="col-md-4">
 		<form class="" method="POST" action="{% url 'heart' %}"> <!-- Form to submit user data to 'heart' view -->
 			{% csrf_token %} <!-- Add CSRF token for form submission security -->
-			{{ form }} <!-- Render the HeartDiseaseForm object fields -->
+			{{ form.as_p }} <!-- Render the HeartDiseaseForm object fields -->
 
 			<div class="mt-4">
 				<button type="submit" class="btn-lg btn-block btn btn-outline-danger mb-5">
